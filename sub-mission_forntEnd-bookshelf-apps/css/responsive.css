@@ -1,0 +1,101 @@
+@media screen and (max-width: 768px) {
+    .col-container {
+        flex-direction: column;
+    }
+
+    .read {
+        width: 100%;
+    }
+
+    .unread {
+        width: 100%;
+    } 
+
+    .tombolTambah img {
+        width: 60px;
+        height: 60px;
+        padding-bottom: 0;
+    }
+
+    .tombolTambah img:hover {
+        width: 63px;
+        height: 63px;
+        margin-top: 15px;
+    }
+
+    .stickyButton {
+        display: flex;
+    }
+
+    .stickyButton img {
+        width: 50px;
+        height: 50px;
+        bottom: 4%;
+        right: 4%;
+        opacity: 0.7;
+    }
+
+    .stickyButton img:active {
+        opacity: 1;
+    }
+
+    form input {
+        height: 40px !important;
+        background-color: white;
+    }
+
+    .con-form {
+        width: 65%;
+        height: 65%;
+    }
+}
+
+@media (max-width: 576px) {
+    .stickyButton img {
+        width: 45px;
+        height: 45px;
+        bottom: 4%;
+        right: 3.5%;
+    }
+
+    form input {
+        border-radius: 5px;
+    }
+
+    .con-form {
+        height: 50%;
+        width: 85%;
+        border-radius: 3;
+    }
+    
+    .image-book img {
+        width: 45px;
+        height: 45px;
+        padding-right: 0;
+        margin-top: 30px;
+        display: inline-block;
+    }
+
+    .desc {
+        padding: 0;
+    }
+
+    .detail-book {
+        display: inline-block;
+    }
+
+    .trashButton {
+        display: block;
+        background-position: top right;
+    }
+
+    .readButton {
+        display: block;
+        background-position: top right;
+    }
+
+    .unreadButton {
+        display: block;
+        background-position: top right;
+    }
+}

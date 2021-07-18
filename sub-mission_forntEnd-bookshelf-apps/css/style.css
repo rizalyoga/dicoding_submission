@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+h1 {
+    color: white;
+    padding-right: 10px;
+}
+
+h3 {
+    text-align: center;
+    padding-bottom: 20px;
+} 
+
+nav {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFCC66;
+    box-shadow: 0px 5px 5px grey;
+    position: fixed;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    margin-top: -10px;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+.container {
+    margin: auto;
+}
+
+.welcome {
+    text-align: center;
+    background-color: aliceblue;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.welcome p {
+    margin-top: 100px;
+}
+
+.tombolTambah img{
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.tombolTambah img:hover {
+    width: 80px;
+    height: 80px;
+    transform: scale(1.1) rotate(180deg);
+}
+
+.tombolTambah img:active {
+    opacity: 0.5;
+}
+
+.stickyButton{
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.stickyButton img {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 4%;
+    right: 2%;
+}
+
+.col-container { 
+    display: flex;
+    justify-content: center;
+    top: 0;
+    margin-top: -10px;
+}
+
+.unread {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    background-color: aliceblue;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+.read {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    background-color: aliceblue;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+.detail-book {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important; 
+    padding: 10px;
+    box-shadow: 0px 5px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.image-book img{
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    padding-right: 10px;
+    margin-top: 10px;
+}
+
+.desc {
+    padding-right: 30px;
+    padding-left: 10px ;
+    padding-top: 5px;
+}
+
+.desc p,small {
+    font-size:14px;
+    overflow: hidden;
+}
+
+.unread .trashButton {
+    display: inline;
+    float: right;
+    background: url('../assets/bin.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+    width: 30px;  
+    height: 30px;  
+    margin-top: 10px;;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.read .trashButton {
+    display: inline;
+    float: right;
+    background: url('../assets/bin.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+    width: 30px;  
+    height: 30px;  
+    margin-top: 10px;;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.unread .readButton {
+    display: inline;
+    float: right;
+    background: url('../assets/reload.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;  
+    height: 30px;          
+    margin-top: 10px;
+    margin-left: 10px; 
+    cursor: pointer;
+    border: none;
+}
+
+.read .unreadButton {
+    display: inline;
+    float: right;
+    background: url('../assets/reload.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;  
+    height: 30px;          
+    margin-top: 10px;
+    margin-left: 10px; 
+    cursor: pointer;
+    border: none;
+}
+
+/* FORM */
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    background-color: rgba(129, 129, 129, 0.7);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    display: none;
+    transition: 1s all !important;
+    transition-property: color !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+.modal-open {
+  display: flex !important;
+}
+
+.con-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 25px;
+    width: 40%;
+    height: 60%;
+    border-radius: 6px;
+    text-align: center;
+    background-color: white;
+}
+
+form input {
+    height: 40px;
+    padding: 10px; 
+    outline: none;
+    border: 2px solid #8397D3;;
+    color: black;
+    font-family: "Nunito" sans-serif;
+    border-radius: 5px 0 0 5px;
+}
+
+#form input {
+    width: 100%;
+    border-radius: 10px;
+    margin: 12px 0;
+    background: transparent;
+}
+  
+#form .cancel {
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #8397D3;
+    padding: 12px;
+    border-radius: 5px;
+    height: 41px;
+    text-decoration: none;
+}
+
+#form .save {
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #8397D3;
+    padding: 12px;
+    border-radius: 5px;
+    height: 41px;
+    text-decoration: none;
+}
+
+#form .cancel:active {
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #1b3994;
+    padding: 12px;
+    border-radius: 5px;
+    height: 41px;
+    text-decoration: none;
+}
+
+#form .save:active {
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #1b3994;
+    padding: 12px;
+    border-radius: 5px;
+    height: 41px;
+    text-decoration: none;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-group #cancel {
+    margin-right: 5px;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px; 
+}
+
+#search input {
+    border-radius: 3px;
+}
